@@ -26,7 +26,8 @@ const config: Config = {
   			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
+  				foreground: 'hsl(var(--secondary-foreground))',
+				background: 'hsl(var(--secondary-background))'
   			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
@@ -58,6 +59,7 @@ const config: Config = {
   		}
   	}
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
