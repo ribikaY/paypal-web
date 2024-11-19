@@ -1,7 +1,7 @@
-const Finance = () => {
+const Finances = () => {
     return (
         <div>Finance</div>
     )
 }
 
-export default Finance
+export default Finances;
