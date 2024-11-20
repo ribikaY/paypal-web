@@ -1,76 +1,89 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
     Card,
     CardContent,
     CardFooter,
-    CardHeader,
-    CardTitle,
 } from "@/components/ui/card";
+import { CreditCard, Heart, Search } from "lucide-react";
+import Actions from "./components/sections/home/actions/actions";
+import AdditionalInfo from "./components/sections/home/components/additionalInfo";
+import Fundraisers from "./components/sections/home/fundRaisers/fundraisers";
+import PaypalRewards from "./components/sections/home/paypalRewards/paypalRewards";
+import PopularDeals from "./components/sections/home/popularDeals/popularDeals";
+import RecentActivity from "./components/sections/home/recentActivity/recentActivity";
+import Requests from "./components/sections/home/requests/requests";
 
 export default function Home() {
     return (
         <main>
-            <div className="flex justify-content">
-                <div className="w-3/5 bg-[#faf8f4] flex flex-col items-end pr-10 py-10">
-                    <Card className="w-3/4 py-2">
-                        <CardHeader className="pb-4">
-                            <CardTitle className="text-lg">PayPal Rewards</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-1.5">
-                            <h1 className="text-5xl">0 points</h1>
-                            <p className="text-gray-600">$0.00 cash back</p>
-                            <p className="text-sm">Available balance</p>
-                        </CardContent>
-                        <CardFooter className="text-blue-600 font-semibold text-lg">
-                            Ways to earn
-                        </CardFooter>
-                    </Card>
-                    <Card className="w-3/4 h-72 my-10 flex justify-between overflow-hidden">
-                        <div className="mt-7">
-                            <CardHeader>
-                                <CardTitle className="text-5xl font-medium text-blue-600">$2.98 SGD</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-lg mt-2">You received a request.</p>
-                            </CardContent>
-                            <CardFooter className="flex items-center gap-2 mt-10">
-                                <Avatar className="w-6 h-6">
-                                    <AvatarImage src="https://github.com/shadcn.png" />
-                                    <AvatarFallback>S</AvatarFallback>
-                                </Avatar>
-                                <p className="text-gray-600">From <span className="text-black">Stickyrella</span></p>
-                                <Button className="bg-[#152c8d] rounded-full font-semibold text-cyan-50 px-5">
-                                    Pay Now
-                                </Button>
-                            </CardFooter>
-                        </div>
-                        <div className="w-1/2 h-full bg-gray-200" />
-                    </Card>
+            <div className="flex">
+                <div className="w-3/5 bg-brand-neutral flex flex-col items-end pr-10 pt-10 pb-28">
+                    <PaypalRewards />
+                    <Requests />
                     <div className="space-y-5 w-3/4">
                         <Card className="w-full py-4">
                             <CardContent className="flex items-center gap-4 py-0">
-                                <div className="text-blue-600">2/5</div>
+                                <div className="text-brand-foreground">2/5</div>
                                 <div className="space-y-2">
                                     <h3 className="text-lg leading-3">Set up your account</h3>
                                     <p className="text-sm">Make it easier to use PayPal</p>
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card className="w-full py-6 border-blue-600 bg-blue-600 text-white">
-                            <CardContent className="flex justify-between items-center gap-4 py-0">
+                        <Card className="w-full border-brand-foreground overflow-hidden">
+                            <CardContent className="flex justify-between items-center gap-4 py-6 bg-brand-foreground text-white">
                                 <div className="space-y-2 mt-5">
                                     <p className="text-lg leading-3">Money is waiting for you</p>
                                     <p className="text-5xl pb-2 pt-9">$2.07</p>
                                     <p className="font-semibold">Accept the money</p>
                                 </div>
-                                <div className="bg-blue-500 h-20 w-32"/>
+                                <div className="bg-blue-500 h-20 w-32" />
                             </CardContent>
+                            <CardFooter className="flex items-start gap-4 pt-5 pb-4">
+                                <CreditCard />
+                                <div>
+                                    <p>Use a debit card to shop in stores with your PayPal balance.</p>
+                                    <Button variant="link" className="text-brand-foreground font-semibold p-0 text-base">Get a PayPal Debit Card</Button>
+                                </div>
+                            </CardFooter>
                         </Card>
+                        <Fundraisers />
+                        <RecentActivity />
+                        <PopularDeals />
                     </div>
                 </div>
-                <div className="w-2/5 pl-10">
-                    right
+                <div className="w-2/5 p-10 pt-12">
+                    <div className="w-3/5">
+                        <div className="flex gap-4">
+                            <Button className="font-semibold w-1/2 py-6 text-lg">Send</Button>
+                            <Button className="font-semibold w-1/2 py-6 text-lg">Request</Button>
+                        </div>
+                        <Actions />
+                        <AdditionalInfo title="Send again">
+                            <div className="flex gap-6">
+                                <div className="space-y-3 w-16">
+                                    <div className="w-full h-16 bg-white rounded-full flex justify-center items-center border">
+                                        <Heart />
+                                    </div>
+                                    <p className="bg-red text-center text-sm font-medium">Stickyrella</p>
+                                </div>
+                                <div className="space-y-3 w-16">
+                                    <div className="w-full h-16 bg-brand rounded-full flex justify-center items-center">
+                                        <Search className="text-white" size={26} />
+                                    </div>
+                                    <p className="text-center text-sm font-medium">Search</p>
+                                </div>
+                            </div>
+                        </AdditionalInfo>
+
+                        <AdditionalInfo title="Banks and cards">
+                            <div className="space-y-3 w-16" />
+                        </AdditionalInfo>
+
+                        <AdditionalInfo title="Your favorite charities">
+                            <div className="space-y-3 w-16" />
+                        </AdditionalInfo>
+                    </div>
                 </div>
             </div>
         </main>

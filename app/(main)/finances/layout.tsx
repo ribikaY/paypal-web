@@ -1,6 +1,15 @@
-const Financelayout = () => {
+import Header from "./components/header"
+
+const Financelayout = ({
+    children
+}: {
+    children: React.ReactNode
+}) => {
     return (
-        <div>layout</div>
+        <div>
+            <Header/>
+            {children}
+        </div>
     )
 }
 

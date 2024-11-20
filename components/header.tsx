@@ -1,30 +1,38 @@
-import { MainNav } from "@/lib/data"
-import logoImage from "@/public/images/logo.png";
+"use client";
+import { mainNav } from "@/lib/data"
+import logoImage from "@/public/images/logos/paypal-small.png";
 import { Bell, Settings } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation";
 import { Button } from "./ui/button"
 
 const Header = () => {
-    //logo nav items               notification icons, settings LOG OUT
+    const pathname = usePathname();
+    const isActive = (path: string) => (pathname === path);
+
     return (
-        <div className="bg-[#152c8d] text-cyan-100/90">
+        <div className="bg-brand text-cyan-100/90">
             <div className="container mx-auto flex items-center justify-between py-5">
                 <div className="flex items-center gap-4">
                     <Image
                         src={logoImage}
                         alt="paypal"
-                        placeholder="blur"
+                        // placeholder="blur"
                         // blurDataURL={logoImage}
-                        priority={true}
+                        // priority={true}
                         width={55}
                         height={55}
                     />
-                    <div className="flex gap-10">
+                    <div className="flex gap-6">
                         {
-                            MainNav.map(nav => (
-                                <Link href={nav.href} key={nav.name} >
-                                    <p className="[&.active]:text-red-500">
+                            mainNav.map(nav => (
+                                <Link
+                                    href={nav.href}
+                                    key={nav.name}
+                                    className={`px-4 py-2 rounded-full ${isActive(nav.href) ? 'bg-brand-foreground/15 text-cyan-50' : 'text-cyan-100/75'}`}
+                                >
+                                    <p>
                                         {nav.name}
                                     </p>
                                 </Link>
