@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import visaLogoImage from "@/public/images/logos/visa.png";
 import { Check } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import visaLogoImage from "@/public/images/logos/visa.png";
 
 const Wallet = () => {
     return (
@@ -53,7 +53,7 @@ const Wallet = () => {
                             <Check size={20} className="text-white bg-green-500 rounded-full mx-auto" />
                             <p>Preferred when paying online</p>
                             <Button className="text-brand-foreground font-medium hover:font p-0 text-sm h-0">Change</Button>
-                            <p className="text-sm">We'll use this when you shop or send money for goods and services.</p>
+                            <p className="text-sm">We&apos;ll use this when you shop or send money for goods and services.</p>
                             <div>
                                 <Link href="#" className="text-brand-foreground font-medium hover:underline">More about payment preferences</Link>
                             </div>

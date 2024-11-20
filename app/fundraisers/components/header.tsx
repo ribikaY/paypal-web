@@ -41,7 +41,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center gap-3.5">
-          <Button variant="link">What's New</Button>
+          <Button variant="link">What&apos;s New</Button>
           <Button variant="link">Help</Button>
 
           <Button variant="outline" className="px-5">

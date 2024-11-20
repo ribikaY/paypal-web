@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
@@ -34,7 +33,7 @@ const SendAndRequest = () => {
                         <div className="space-y-1.5 text-center">
                             <div className="text-sm">Conversion rate: 1 USD = 1.2611 SGD</div>
                             <p className="text-xs text-gray-700 leading-5">
-                                This rate includes a currency conversion spread. The amount you'll pay may change as we lock in your rate, so check your final amount and fee details before you send.
+                                This rate includes a currency conversion spread. The amount you&apos;ll pay may change as we lock in your rate, so check your final amount and fee details before you send.
                             </p>
                         </div>
                         <Textarea

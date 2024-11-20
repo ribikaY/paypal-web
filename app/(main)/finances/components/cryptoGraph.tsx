@@ -27,7 +27,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 const CryptoGraph = ({ cryptoData }: { cryptoData: CryptoDataType }) => {
-    const [activeChart, setActiveChart] =
+    const [activeChart] =
         React.useState<keyof typeof chartConfig>("desktop")
 
     // const total = React.useMemo(
