@@ -5,7 +5,7 @@ import "../styles/globals.css";
 const geistSans = localFont({
   src: "../public/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
+  weight: "100 200 300 400 500 900",
 });
 const geistMono = localFont({
   src: "../public/fonts/GeistMonoVF.woff",
