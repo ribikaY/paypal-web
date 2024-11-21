@@ -16,7 +16,7 @@ export const mainNav: Nav[] = [
 	},
 	{
 		name: "Rewards",
-		href: "#",
+		href: "/rewards",
 	},
 	{
 		name: "Wallet",
@@ -24,11 +24,11 @@ export const mainNav: Nav[] = [
 	},
 	{
 		name: "Activity",
-		href: "#",
+		href: "/invoices",
 	},
 	{
 		name: "Help",
-		href: "#",
+		href: "/help",
 	},
 ];
 

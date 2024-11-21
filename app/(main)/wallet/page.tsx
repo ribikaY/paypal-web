@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import visaLogoImage from "@/public/images/logos/visa.png";
 import { Check } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 const Wallet = () => {
     return (
-        <div className="flex min-h-screen pb-24">
-            <div className="w-1/2 pl-12 pt-6 pb-10">
-                <div className="w-2/5 mx-auto space-y-3.5">
+        <div className="flex flex-col items-center lg:flex-row lg:items-start min-h-screen pb-24">
+            <div className="w-4/5 sm:w-1/2 md:w-2/5 lg:w-1/2 xl:pl-12 pt-6 lg:pb-10">
+                <div className="w-full lg:w-3/5 2xl:w-2/5 mx-auto space-y-3.5">
                     <div className="mx-auto flex justify-center">
                         <Button className="bg-[#1c43ae] px-6 rounded-full mx-auto py-5">Link a card or bank</Button>
                     </div>
@@ -25,15 +24,15 @@ const Wallet = () => {
                     </Card>
                 </div>
             </div>
-            <div className="w-1/2 pl-0 pr-10 pt-12">
-                <div className="w-1/2">
-                    <div className="w-full h-72 bg-zinc-400 rounded-xl flex justify-between items-end px-4 text-white">
+            <div className="w-5/6 lg:w-1/2 pl-0 lg:pr-10 pt-12">
+                <div className="w-full sm:w-[455px] mx-auto lg:mx-0">
+                    <div className="w-full h-52 sm:h-72 bg-zinc-400 rounded-xl flex justify-between items-end px-4 text-white">
                         <p className="mb-5">**0687</p>
                         <Image
-                            src={visaLogoImage}
+                            src="/images/logos/visa.png"
                             alt="visa"
                             placeholder="blur"
-                            // blurDataURL={logoImage}
+                            blurDataURL="/images/logos/visa.png"
                             priority={true}
                             width={77}
                             height={35}

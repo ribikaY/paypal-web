@@ -80,3 +80,24 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 0px;
+}
+
+
+/* Hide the horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1754dabb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0f172a;
+}

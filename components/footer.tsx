@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="shadow-inner py-8">
                 <div className="container mx-auto px-24">
                     <div className="flex flex-col-reverse gap-6 items-center lg:flex-row lg:gap-10">
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground leading-relaxed text-center sm:text-left">
                             ©1999-2024 PayPal, Inc. All rights reserved.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center gap-8 text-sm">

@@ -9,7 +9,7 @@ const BillingCard = ({ icon, title, children }: BillingCardProps) => {
         <div className="w-full">
             <div className="flex items-center gap-6 py-6">
                 {icon}
-                <h2 className="text-xl font-medium">{title}</h2>
+                <h2 className="text-lg sm:text-xl font-medium">{title}</h2>
             </div>
             {children}
         </div>

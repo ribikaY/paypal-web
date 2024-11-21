@@ -20,7 +20,7 @@ const SendAndRequest = () => {
 
     return (
         <div className='pt-14 pb-24'>
-            <div className='container sm:w-[550px]'>
+            <div className='container sm:w-[550px] xl:w-[575px]'>
                 <Card className='w-full flex flex-col items-center mx-auto sm:px-10'>
                     <CardHeader>
                         <div className="flex justify-between items-center gap-6 flex-col sm:flex-row">

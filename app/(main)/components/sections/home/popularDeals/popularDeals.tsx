@@ -19,7 +19,7 @@ const PopularDeals = () => {
       <Carousel className="w-full mt-8">
         <CarouselContent className="pl-2">
           {popularDeals.map(deal => (
-            <CarouselItem key={deal.name} className="basis-1/2 lg:basis-1/3 xl:basis-1/4">
+            <CarouselItem key={deal.name} className="basis-1/2 xl:basis-1/4">
               <DealsCard deal={deal} />
             </CarouselItem>
           ))}

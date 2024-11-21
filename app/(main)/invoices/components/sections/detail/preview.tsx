@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Preview = () => {
     return (
-        <div className="w-1/2">
+        <div className="lg:max-w-3xl mx-auto xl:w-1/2 xl:max-w-auto xl:mx-0">
             <Tabs defaultValue="Email preview" className="w-full">
                 <TabsList className="grid grid-cols-3 w-3/4 h-11 mx-auto rounded-full bg-gray-200/50">
 
