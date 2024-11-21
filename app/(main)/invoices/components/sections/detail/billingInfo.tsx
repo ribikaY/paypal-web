@@ -8,7 +8,7 @@ import RecepientAction from "../../recepientAction";
 const BillingInfo = () => {
 
     return (
-        <Card className="w-full max-w-3xl mx-auto bg-white px-6 py-4 shadow-lg">
+        <Card className="w-[95%] md:max-w-3xl xl:max-w-xl 2xl:max-w-3xl mx-auto sm:px-6 sm:py-4 shadow-lg">
             <CardContent className="space-y-7">
                 <RecepientAction />
                 <ItemsAction />

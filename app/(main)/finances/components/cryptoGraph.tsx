@@ -109,13 +109,13 @@ const CryptoGraph = ({ cryptoData }: { cryptoData: CryptoDataType }) => {
                 </LineChart>
             </ChartContainer>
             <div className='space-y-4 mt-14'>
-                <div className="inline-block relative -translate-x-1/2 left-1/2">
-                    <div className="flex gap-6 rounded-full p-1 bg-neutral-200/45">
+                <div className="relative left-1/2 -translate-x-1/2 w-full max-w-md sm:max-w-lg md:inline-block">
+                    <div className="flex flex-wrap gap-3 sm:gap-6 rounded-full p-2 sm:p-1 bg-neutral-200/45">
                         {["24H", "1W", "1M", "6M", "1Y", "ALL"].map((amount) => (
                             <Button
                                 key={amount}
                                 variant="ghost"
-                                className='text-xs bg-transparent first-of-type:bg-white first-of-type:text-brand hover:bg-white text-gray-600 shadow-none border-brand py-5 px-5 hover:text-brand'
+                                className='text-[13px] bg-transparent first-of-type:bg-white first-of-type:text-brand hover:bg-white text-gray-600 shadow-none border-brand py-5 px-5 hover:text-brand'
                             >
                                 {amount}
                             </Button>

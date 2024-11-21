@@ -10,9 +10,9 @@ const InvoiceDetail = async ({
   const invoiceId = (await params).id;
 
   return (
-    <div >
+    <div>
       <InvoiceHeader invoiceId={invoiceId}/>
-      <div className="flex justify-between gap-12 pt-4 pb-28 px-36 bg-brand-neutral">
+      <div className="flex flex-col xl:flex-row justify-between gap-12 pt-4 pb-28 md:px-12 xl:px-20 2xl:px-36 bg-brand-neutral">
         <BillingInfo />
         <Preview />
       </div>

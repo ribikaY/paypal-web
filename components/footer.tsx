@@ -1,13 +1,13 @@
+import logoImage from "@/public/images/logos/paypal-big.png";
 import Image from "next/image"
 import Link from "next/link"
-import logoImage from "@/public/images/logos/paypal-big.png";
 
 const Footer = () => {
     return (
         <footer className="w-full shadow-inner py-4">
             <div className="container mx-auto px-24">
-                <div className="grid grid-cols-1 md:grid-cols-2 py-6">
-                    <div className="flex items-center gap-9">
+                <div className="py-6">
+                    <div className="flex flex-col items-center justify-between md:flex-row gap-4 md:gap-0 lg:justify-start lg:gap-9">
                         <Link href="#" className="flex items-center">
                             <Image
                                 src={logoImage}
@@ -17,7 +17,7 @@ const Footer = () => {
                                 className="h-8 object-contain"
                             />
                         </Link>
-                        <nav className="hidden md:flex items-center gap-6 text-lg">
+                        <nav className="flex flex-col sm:flex-row items-center gap-6 text-sm sm:text-base lg:text-lg">
                             <Link
                                 href="#"
                                 className="font-medium"
@@ -49,11 +49,11 @@ const Footer = () => {
             </div>
             <div className="shadow-inner py-8">
                 <div className="container mx-auto px-24">
-                    <div className="flex gap-10">
-                        <p className="text-sm text-muted-foreground">
+                    <div className="flex flex-col-reverse gap-6 items-center lg:flex-row lg:gap-10">
+                        <p className="text-sm text-muted-foreground leading-relaxed text-center sm:text-left">
                             ©1999-2024 PayPal, Inc. All rights reserved.
                         </p>
-                        <div className="flex items-center gap-8 text-sm">
+                        <div className="flex flex-col sm:flex-row items-center gap-8 text-sm">
                             <Link
                                 href="#"
                             >

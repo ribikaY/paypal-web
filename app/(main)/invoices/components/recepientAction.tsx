@@ -15,10 +15,10 @@ const RecipientAction = () => {
             title="Who are you billing?"
         >
             <div className="space-y-4">
-                <div className="flex items-center justify-between border border-gray-400/70 rounded-lg py-3 px-4">
+                <div className="flex flex-wrap items-center justify-between border border-gray-400/70 rounded-lg py-3 px-4">
                     <div>
                         <p className="text-sm font-medium">Abigail Smith; Jane Apothecary</p>
-                        <p className="text-xs text-muted-foreground">jdoe@content-mobbin.com</p>
+                        <p className="text-xs text-muted-foreground leading-8 sm:leading-normal">jdoe@content-mobbin.com</p>
                     </div>
                     <div className="flex space-x-2">
                         <Button variant="ghost" size="icon" onClick={handleEditRecipient}>
