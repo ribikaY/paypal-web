@@ -6,8 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsList } from "@/components/ui/tabs"
-import { TabsContent, TabsTrigger } from "@radix-ui/react-tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Clock, Heart } from "lucide-react";
 import Image from "next/image";
 import Header from "./components/header";

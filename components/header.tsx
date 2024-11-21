@@ -1,6 +1,5 @@
 "use client";
 import { mainNav } from "@/lib/data"
-import logoImage from "@/public/images/logos/paypal-small.png";
 import { Bell, Settings } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -16,11 +15,11 @@ const Header = () => {
             <div className="container mx-auto flex items-center justify-between py-5">
                 <div className="flex items-center gap-4">
                     <Image
-                        src={logoImage}
+                        src="/images/logos/paypal-small.png"
                         alt="paypal"
-                        // placeholder="blur"
-                        // blurDataURL={logoImage}
-                        // priority={true}
+                        placeholder="blur"
+                        blurDataURL="/images/logos/paypal-small.png"
+                        priority={true}
                         width={55}
                         height={55}
                     />
