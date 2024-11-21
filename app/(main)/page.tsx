@@ -15,7 +15,7 @@ import Requests from "./components/sections/home/requests/requests";
 
 export default function Home() {
     return (
-        <main className="border-4">
+        <main>
             <div className="flex flex-wrap lg:flex-nowrap">
                 <div className="w-full lg:w-1/2 xl:w-3/5 bg-brand-neutral flex flex-col items-center lg:items-end px-4 sm:px-6 lg:pr-10 pt-10 pb-14 sm:pb-28 space-y-10">
                     <PaypalRewards />
