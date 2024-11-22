@@ -66,6 +66,13 @@ const config: Config = {
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
 			},
+			boxShadow: {
+				custom: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+				custom2: "rgba(0, 0, 0, 0.08) 2px 3px 4px",
+				"nav-mobile":
+					"rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px",
+				card: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+			},
 		},
 	},
 	// eslint-disable-next-line @typescript-eslint/no-require-imports

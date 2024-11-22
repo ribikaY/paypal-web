@@ -16,6 +16,10 @@ import Requests from "./components/sections/home/requests/requests";
 export default function Home() {
     return (
         <main>
+            <div className="flex flex-col sm:flex-row gap-4 lg:hidden bg-brand-neutral pt-10 container">
+                <Button className="font-semibold sm:w-1/2 py-6 sm:text-lg">Send</Button>
+                <Button className="font-semibold sm:w-1/2 py-6 sm:text-lg">Request</Button>
+            </div>
             <div className="flex flex-wrap lg:flex-nowrap">
                 <div className="w-full lg:w-1/2 xl:w-3/5 bg-brand-neutral flex flex-col items-center lg:items-end px-4 sm:px-6 lg:pr-10 pt-10 pb-14 sm:pb-28 space-y-10">
                     <PaypalRewards />
@@ -54,7 +58,7 @@ export default function Home() {
                 </div>
                 <div className="w-full lg:w-1/2 xl:w-2/5 p-10 lg:pt-12">
                     <div className="w-full sm:w-5/6 xl:w-[411px] mx-auto lg:mx-0">
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="hidden lg:flex flex-col sm:flex-row gap-4">
                             <Button className="font-semibold sm:w-1/2 py-6 sm:text-lg">Send</Button>
                             <Button className="font-semibold sm:w-1/2 py-6 sm:text-lg">Request</Button>
                         </div>
