@@ -4,7 +4,8 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import { EllipsisVertical, Heart } from "lucide-react";
+import { EllipsisVertical } from "lucide-react";
+import { FaHandHoldingHeart } from "react-icons/fa";
 
 const Fundraisers = () => {
     return (
@@ -17,7 +18,7 @@ const Fundraisers = () => {
         </CardHeader>
         <CardFooter className="flex justify-between flex-wrap gap-4">
           <div className="flex gap-4 flex-wrap">
-            <Heart />
+            <FaHandHoldingHeart className="text-brand-foreground w-6 h-6"/>
             <p>A Doctor for a Life</p>
           </div>
           <div className="text-right">

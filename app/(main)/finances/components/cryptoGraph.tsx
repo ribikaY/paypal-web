@@ -16,8 +16,8 @@ const chartConfig = {
     // views: {
     //     label: "Crypto",
     // },
-    desktop: {
-        label: "Desktop",
+    sellingPrice: {
+        label: "Selling Price",
         color: "hsl(var(--chart-1))",
     },
     // mobile: {
@@ -28,7 +28,7 @@ const chartConfig = {
 
 const CryptoGraph = ({ cryptoData }: { cryptoData: CryptoDataType }) => {
     const [activeChart] =
-        React.useState<keyof typeof chartConfig>("desktop")
+        React.useState<keyof typeof chartConfig>("sellingPrice")
 
     // const total = React.useMemo(
     //     () => ({

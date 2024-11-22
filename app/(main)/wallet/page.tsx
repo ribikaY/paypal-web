@@ -1,7 +1,7 @@
+import VisaCard from "@/components/visaCard"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 
 const Wallet = () => {
@@ -26,19 +26,7 @@ const Wallet = () => {
             </div>
             <div className="w-5/6 lg:w-1/2 pl-0 lg:pr-10 pt-12">
                 <div className="w-full sm:w-[455px] mx-auto lg:mx-0">
-                    <div className="w-full h-52 sm:h-72 bg-zinc-400 rounded-xl flex justify-between items-end px-4 text-white">
-                        <p className="mb-5">**0687</p>
-                        <Image
-                            src="/images/logos/visa.png"
-                            alt="visa"
-                            placeholder="blur"
-                            blurDataURL="/images/logos/visa.png"
-                            priority={true}
-                            width={77}
-                            height={35}
-                            className="object-contain self-end"
-                        />
-                    </div>
+                    <VisaCard accountNo="0687" classname="w-full h-52 sm:h-72 rounded-xl" />
                     <div className="mt-4">
                         <p className="text-sm">Visa Debit **0687</p>
                         <Button variant="link" className="text-brand-foreground font-semibold p-0 text-sm">Give it a nickname</Button>

@@ -15,20 +15,22 @@ export const columns: ColumnDef<Invoice>[] = [
     {
         id: "select",
         header: ({ table }) => (
-            <Checkbox
-                checked={
-                    table.getIsAllPageRowsSelected() ||
-                    (table.getIsSomePageRowsSelected() && "indeterminate")
-                }
-                onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-                aria-label="Select all"
-                className="text-white ml-4 w-5 h-5"
-            />
+            <div>
+                <Checkbox
+                    checked={
+                        table.getIsAllPageRowsSelected() ||
+                        (table.getIsSomePageRowsSelected() && "indeterminate")
+                    }
+                    onCheckedChange={(value: boolean) => table.toggleAllPageRowsSelected(!!value)}
+                    aria-label="Select all"
+                    className="text-white ml-4 w-5 h-5"
+                />
+            </div>
         ),
         cell: ({ row }) => (
             <Checkbox
                 checked={row.getIsSelected()}
-                onCheckedChange={(value) => row.toggleSelected(!!value)}
+                onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
                 aria-label="Select row"
                 className="text-white ml-4 w-5 h-5"
             />

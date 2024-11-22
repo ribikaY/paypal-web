@@ -18,7 +18,7 @@ const NavLink = ({ classname }: NavLinkProps) => {
                     <Link
                         href={nav.href}
                         key={nav.name}
-                        className={`px-4 py-2 rounded-full ${isActive(nav.href) ? 'bg-brand-foreground/15 text-cyan-50' : 'text-cyan-100/75'}`}
+                        className={`px-4 py-2 rounded-full ${isActive(nav.href) ? 'lg:bg-brand-foreground/15 text-cyan-50' : 'text-cyan-100/75'}`}
                     >
                         <p>
                             {nav.name}

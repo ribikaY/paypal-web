@@ -38,7 +38,7 @@ export function DataTableColumnHeader<TData, TValue>({
 					<Button
 						variant="ghost"
 						size="sm"
-						className="font-semibold text-primary md:text-base -ml-3 h-8 hover:bg-transparent hover:text-muted-foreground data-[state=open]:bg-muted "
+						className="font-semibold text-primary text-sm md:text-base -ml-3 h-8 hover:bg-transparent hover:text-muted-foreground data-[state=open]:bg-muted "
 					>
 						<span>{title}</span>
 						<div className="border border-brand/45 text-brand ml-2 p-1.5 rounded-full">
