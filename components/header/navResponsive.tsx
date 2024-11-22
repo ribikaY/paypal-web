@@ -15,7 +15,7 @@ const NavResponsive = () => {
   return (
     <div className="lg:hidden mt-2">
       <Sheet>
-        <SheetTrigger className="text-slate-400 ml-2">
+        <SheetTrigger asChild className="text-slate-400 ml-2">
           <Menu size={25} />
         </SheetTrigger>
         <SheetContent className="bg-brand border-none text-muted">

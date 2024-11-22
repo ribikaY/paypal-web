@@ -7,12 +7,34 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Clock, Heart } from "lucide-react";
+import { Clock } from "lucide-react";
 import Image from "next/image";
+import { FaDonate, FaEye } from "react-icons/fa";
+import { FaHandHoldingHeart } from "react-icons/fa6";
+import { HiShare } from "react-icons/hi2";
+import { MdEdit } from "react-icons/md";
 import Header from "./components/header";
 
 const Fundraisers = () => {
-  const actions = ["Edit", "Show Fundraiser", "Share", "Donate"];
+  const actions = [
+    {
+      icon: <MdEdit />,
+      text: "Edit"
+    },
+    {
+      icon: <FaEye className="w-7 h-7" />,
+      text: "Show Fundraiser"
+    },
+    {
+      icon: <HiShare className="w-7 h-7" />,
+      text: "Share"
+    },
+    {
+      icon: <FaDonate className="w-7 h-7" />,
+      text: "Donate"
+    },
+  ]
+
   return (
     <div>
       <Header />
@@ -46,7 +68,7 @@ const Fundraisers = () => {
                       </CardHeader>
                       <CardFooter className="mt- flex flex-col items-start gap-3 ">
                         <div className="flex items-center gap-2 text-primary text-sm">
-                          <Heart size={20} />
+                          <FaHandHoldingHeart className="text-brand-foreground w-6 h-6" />
                           <p>A Doctor for a Life</p>
                         </div>
                         <Separator className="block w-full h-1.5 bg-gray-100 rounded-full" />
@@ -76,7 +98,7 @@ const Fundraisers = () => {
           <div className="w-3/5 py-8 pr-44 pl-10">
             <h1 className="text-4xl font-medium">A Doctor for a Life</h1>
             <div className="flex items-center gap-2 text-primary text-sm mt-3 mb-10">
-              <Heart size={20} className="text-brand-foreground" />
+              <FaHandHoldingHeart className="text-brand-foreground w-6 h-6" />
               <p>Doctors Without Borders</p>
             </div>
             <div className="flex gap-6">
@@ -97,11 +119,13 @@ const Fundraisers = () => {
               {
                 actions.map(action => (
 
-                  <div key={action} className="space-y-3">
+                  <div key={action.text} className="space-y-3">
                     <div className="w-12 h-12 mx-auto bg-brand-neutral rounded-full flex justify-center items-center">
-                      <Heart size={18} className="text-brand" />
+                      <div className="text-brand">
+                        {action.icon}
+                      </div>
                     </div>
-                    <p className="text-center text-sm font-medium">{action}</p>
+                    <p className="text-center text-sm font-medium">{action.text}</p>
                   </div>
                 ))
               }

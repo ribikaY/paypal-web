@@ -28,7 +28,7 @@ const FinanceCrypto = () => {
             </Link>
             <div className="sm:max-w-5xl mx-auto my-6 sm:my-12">
                 <Tabs defaultValue="Bitcoin" >
-                    <TabsList className="w-full bg-transparent border-b-2 h-11 sm:grid sm:grid-cols-5">
+                    <TabsList className="w-full bg-transparent border-b-2 h-11 flex justify-between gap-4 sm:grid sm:grid-cols-5">
                         {
                             cryptos.map(crypto => (
 
@@ -38,9 +38,11 @@ const FinanceCrypto = () => {
                                         alt={crypto.icon}
                                         width={20}
                                         height={20}
-                                        className='mr-2'
+                                        className='sm:mr-2'
                                     />
-                                    {crypto.name}
+                                    <span className='hidden sm:inline-block'>
+                                        {crypto.name}
+                                    </span>
                                 </TabsTrigger>
                             ))
                         }

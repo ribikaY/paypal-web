@@ -11,7 +11,7 @@ const AdditionalInfo = ({
         <div className="mt-16 mb-20">
             <div className="flex justify-between items-center">
                 <p className="text-xl font-semibold">{title}</p>
-                <EllipsisVertical className="text-gray-500" />
+                <EllipsisVertical className="text-gray-500 cursor-pointer hover:text-gray-700" />
             </div>
             <div className="mt-8">
                 {children}
